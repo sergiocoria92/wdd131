@@ -1,0 +1,205 @@
+/*
+  font-family: "Montserrat", serif
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+	text-align: center;
+	background-color: rgb(0 110 182 / 1);
+	padding: 0.5rem;
+	color: #fff;
+}
+
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 0 auto 2rem;
+	max-width: 90vw;
+}
+
+main {
+	margin: 1rem;
+	border: 1px solid rgb(0 0 0 / .2);
+	padding: 1rem;
+	background-color: #eee;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.tarjeta {
+    flex: 1 1 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido img {
+    max-width: 45%;  /* Asegura que la imagen no sea demasiado grande */
+    height: auto;
+}
+
+.contenido p {
+    max-width: 50%;
+}
+
+/* Estilos para la segunda sección (Web dev resources) */
+.tarjeta2 {
+    flex: 1 1 45%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.tarjeta img {
+    max-width: 100%;  /* Asegura que las imágenes no se desborden */
+    height: auto;     /* Mantiene la relación de aspecto */
+    display: block;   /* Elimina el espacio extra debajo de las imágenes */
+    margin-bottom: 10px; /* Espacio entre la imagen y el contenido */
+}
+
+.navigation2 {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #333;
+	align-items: center;
+}
+.navigation2 li {
+	flex: 1 1 auto; /* What is the difference between auto and 100% flex-basis? - turn on link borders to view */
+}
+.navigation2 a {
+	display: block;
+	color: #eee;
+	padding: 0.75rem;
+	text-decoration: none;
+	text-align: center;
+}
+
+.navigation2 a:hover {
+	font-weight: 700;
+	text-decoration: underline;
+	text-decoration-color: yellow;
+}
+
+
+
+/*estilo para main tarjetas............*/
+
+
+
+/* Estilos para el contenedor de la tarjeta */
+.tarjeta {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.tarjeta img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Estilos para el encabezado de la tarjeta */
+.tarjeta h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Estilos para el contenido de texto */
+.tarjeta p {
+    font-size: 1em;
+    color: #555;
+}
+
+
+/*footer*/
+
+p {
+	margin: 0.25rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 0.5rem 0.75rem;
+	background-color: #eee;
+}
+
+.highlight {
+	color: navy;
+	font-weight: 700;
+	font-family: hebrew;
+}
+
+
+
+/***tarjeta .. revisar**/ 
+/* Estilos para la tarjeta 1 (About me) */
+.tarjeta .contenido p {
+    text-align: justify; /* Justifica el texto en About me */
+    margin-bottom: 20px;
+}
+
+.tarjeta .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tarjeta .contenido img {
+    max-width: 40%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+/* Estilos para la sección invertida */
+.tarjeta .contenido.invertido {
+    flex-direction: row-reverse;
+    margin-top: 20px;
+    
+}
+
+.tarjeta .contenido.invertido img {
+    max-width: 40%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+.tarjeta .contenido.invertido p {
+    text-align: justify; /* Justifica el texto en la sección invertida */
+}
