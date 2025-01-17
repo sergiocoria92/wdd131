@@ -1,159 +1,130 @@
-/*.kanit-light {
-    font-family: "Kanit", serif;
-    font-weight: 300;
-    font-style: normal;
-  }*/
-
-
-  * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: "Sansita", sans-serif;
+    font-family: "Sansita", sans-serif;
 }
 
-/* mobile **************************/
+/* Estilos del header */
 header {
-	background-color: #F5F5DC;
-	display: grid;
-	grid-gap: 1rem;
-	padding: 20px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: 0 0 30px #003366;
+    background-color: #F5F5DC;
+    display: grid;
+    grid-gap: 1rem;
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #003366;
 }
 
-header,
-main {
-	margin: 0 auto;
-}
-
+/* Título h1 centrado en la parte superior */
 h1 {
-	font-size: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    margin: 40px 0; /* Espacio adicional superior e inferior para el título */
 }
 
+/* Estilos para la barra de navegación */
 nav {
-	background-color: #003366;
+    background-color: #003366;
 }
 
 nav ul {
-	list-style: none;
-	display: flex;
-	flex-direction: column;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
 
 nav a {
-	display: block;
-	color: #fff;
-	text-align: center;
-	padding: 1rem;
-	text-decoration: none;
-	font-size: larger;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-size: larger;
 }
 
 nav a:hover {
-	text-decoration: underline double;
-	background-color: #eee;
-	color: #000;
+    text-decoration: underline double;
+    background-color: #eee;
+    color: #000;
 }
 
 .active {
-	color: yellow;
+    color: yellow;
 }
 
-/* Larger Views ******************************/
+/* Estilos para vistas más grandes */
 @media (min-width: 740px) {
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav ul {
-		justify-content: flex-end;
-		flex-direction: row;
-	}
-	nav a {
-		flex: 1 1 100%;
-	}
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav ul {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+    nav a {
+        flex: 1 1 100%;
+    }
+}
+header,
+main {
+    max-width: 1200px; /* Ajuste el tamaño máximo de la página */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 20px;
 }
 
-/*ESTE ESTILO HACE QUE AL NAVEGAR O PASAR EL MOUSE CAMBIEN DE COLOR*/
-/* Estilo inicial para los enlaces */
-nav a {
-    color: white; /* Color del texto */
-    text-decoration: none; /* Quitar el subrayado */
-    padding: 10px;
-    transition: color 0.3s ease; /* Animación suave al cambiar el color */
+/* Estilo para la sección del título (fuera de la cuadrícula) */
+.title-section {
+    margin-bottom: 20px; /* Espacio entre el título y la cuadrícula */
 }
 
-/* Estilo cuando se pasa el cursor sobre los enlaces */
-nav a:hover {
-    color: #FF6347; /* Color rojo tomate cuando se pasa el cursor */
+.main-title {
+    text-align: center; /* Centra el título */
+    font-size: 2rem; /* Tamaño de fuente adecuado */
+    margin-bottom: 20px; /* Espacio debajo del título */
 }
 
-main { 
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-
-
-  /************************/
-
-
-
-/**/
-
-/* Centramos el título h1 *//* Centramos el título h1 */
-h1 {
-    text-align: center; /* Centra el texto */
-    font-size: 2rem; /* Tamaño de fuente */
-    margin-bottom: 20px; /* Un pequeño espacio debajo del título */
+/* Estilos para la cuadrícula de imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* Crea 3 columnas de tamaño igual */
+    grid-gap: 20px;  /* Espacio entre las celdas de la cuadrícula */
+    margin-top: 20px; /* Margen superior para separar el título de la cuadrícula */
 }
 
-/* Estilos para el contenedor <figure> */
+/* Ajustes para las imágenes y sus descripciones */
 figure {
-    display: grid; /* Utilizamos grid para las imágenes */
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
-    gap: 1rem; /* Espacio entre las imágenes */
-    padding: 0;
-    margin: 0;
-    justify-items: center; /* Centra las imágenes dentro de sus celdas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-/* Estilos para cada <div> dentro del <figure> */
-figure div {
-    display: flex; /* Usamos flexbox para el contenido dentro de cada div */
-    flex-direction: column; /* Alinea la imagen y la leyenda en una columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Centra el texto */
-}
-
-/* Estilos para las imágenes */
-figure div img {
-    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
-    object-fit: cover; /* Asegura que las imágenes se ajusten sin deformarse */
-}
-
-/* Estilos para las leyendas (figcaption) de la imagen*/
 figcaption {
-    font-size: 1rem; /* Tamaño de fuente de la leyenda */
-    margin-top: 5px; /* Un poco de espacio entre la imagen y la leyenda */
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    font-size: 1rem;
+    color: #333;
 }
 
+img {
+    width: 100%; /* Hace que las imágenes ocupen todo el espacio disponible */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
 
+/* Estilos para el pie de página */
 footer {
     text-align: center; /* Centra el texto horizontalmente */
-    padding: 20px 0; /* Espaciado arriba y abajo */
-    background-color: #F5F5DC; /* Fondo opcional para el pie de página */
+    padding: 20px 0;
+    background-color: #F5F5DC;
 }
 
 footer p {
-    margin: 0; /* Elimina márgenes por defecto */
-    font-size: 1rem; /* Tamaño de fuente opcional */
+    margin: 0;
+    font-size: 1rem;
 }
