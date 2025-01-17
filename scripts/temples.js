@@ -7,11 +7,19 @@ if (lastModifiedElement) {
     console.log('Could not find the element with the id "lastModified"');
 }
 
-// Seleccionamos el icono de hamburguesa y el contenedor del menú
-const hamburger = document.getElementById('hamburger');
-const nav = document.querySelector('nav');
+// Store the selected elements that we are going to use. This is not required but a good practice with larger programs where the variable will be referenced more than once.
+const mainnav = document.querySelector('.navigation')
+const hambutton = document.querySelector('#menu');
 
-// Añadimos un evento de clic para cambiar la clase "active" en el contenedor del menú
-hamburger.addEventListener('click', function () {
-    nav.classList.toggle('active');
+// Add a click event listender to the hamburger button and use a callback function that toggles the list element's list of classes.
+hambutton.addEventListener('click', () => {
+	mainnav.classList.toggle('show');
+	hambutton.classList.toggle('show');
 });
+
+/* ❔What does toggle mean?
+We could write separate add and remove statements. Toggle adds the class if it does not currently exist or removes the class if it does exist. 
+The CSS class rules will handle the different views, layouts, and displays.
+🗝️ JavaScript only applies the class value or not.
+*/
+

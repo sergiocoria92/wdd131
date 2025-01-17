@@ -35,7 +35,6 @@
         padding: .5rem;
     }
 
-    /* Cambiar el comportamiento de la cuadrícula para las imágenes */
     .container {
         display: grid;
         grid-template-columns: 1fr;  /* Para móviles, usar una columna */
@@ -46,20 +45,16 @@
     figure {
         background-color: #fff;
         display: block;  /* Asegúrate que figure se comporta como bloque */
-        width: 100%; /* Hacemos que figure ocupe el 100% */
-        margin: 1rem auto;
     }
 
-    figure img {
-        width: 100%; /* Las imágenes ocuparán todo el ancho disponible */
+    img {
+        width: 100%;
         height: auto;
         margin: .5rem;
     }
 
     figcaption {
-        font-size: 1rem; /* Tamaño de la fuente más grande en móviles */
-        text-align: center;
-        margin-top: 10px;
+        font-size: smaller;
     }
 
     /* Hover effect */
@@ -67,61 +62,177 @@
         box-shadow: 0 0 50px #333;
     }
 
-    /* Menú de navegación en dispositivos móviles: convertir a un menú desplegable */
-    nav ul {
-        display: block; /* Muestra los enlaces en una sola columna */
-        padding: 0;
+    /* Rounded corners - boxmodel */
+    .rocorn {
+        border-radius: 15px 150px;
+    }
+
+    /* Simple opacity effects */
+    .opac {
+        opacity: .5;
+    }
+
+    .blur {
+        filter: blur(4px);
+    }
+
+    .gray {
+        filter: blur(1px) grayscale(50%);
+    }
+
+    .object {
+        width: 100%;
+        height: 75px;
+        object-fit: cover;
+    }
+
+    .contrast {
+        filter: contrast(50%);
+    }
+
+    .saturate {
+        filter: saturate(50%);
+    }
+
+    .shape-outside {
+        border-radius: 100px;
+        width: 35%;
+        margin: 0 3em .5em 0;
+        float: left;
+        shape-outside: circle();
+    }
+
+    .mbm-difference {
+        mix-blend-mode: difference;
+    }
+
+    .mbm-hard-light {
+        mix-blend-mode: hard-light;
+    }
+
+    .transform {
+        transform: scaleX(-1);
+    }
+
+    .turn {
+        rotate: .05turn;
+        border: 1px solid rgba(0,0,0,.3);
+        padding: 1px;
+    }
+
+    .mosaic {
+        position: relative;
+        width: 90%;
+    }
+
+    .mosaic img {
+        width: 100%;
         margin: 0;
-        list-style: none;
     }
 
-    nav a {
-        display: block; /* Cada enlace ocupará toda una línea */
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-        text-decoration: none;
-        font-size: larger;
-        background-color: #003366;
-        margin: 5px 0; /* Añadir un margen entre los enlaces */
-    }
-
-    nav a:hover {
-        text-decoration: underline double;
-        background-color: #eee;
-        color: #000;
-    }
-
-    .active {
-        color: yellow;
-    }
-
-    /* Hacer que las imágenes y su contenedor se alineen en una columna */
+    /* Para la cuadrícula de imágenes */
     .pic {
         background: #fff;
-        display: block; /* Apilar las imágenes en una sola columna */
-        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* Para pantallas pequeñas, usar dos columnas */
+        grid-gap: 7px;
+        position: relative;
+        width: 100%;
+        mix-blend-mode: lighten; /* Prueba con otras combinaciones como darken o overlay */
     }
 
     .pic div {
         background: #000;
-        height: 25vw; /* Hacer las imágenes más grandes en móviles */
-        max-height: 320px;  /* Control de altura en dispositivos pequeños */
+        height: 18.5vw;
+        max-height: 320px;  /* Ajusta la altura en móviles */
     }
 
     /* Cambiar la distribución de los elementos para pantallas pequeñas */
     .pic div:nth-of-type(3),
     .pic div:nth-of-type(8),
     .pic div:nth-of-type(13) {
-        grid-column: span 1;  /* No hacer que algunos divs se extiendan sobre varias columnas */
+        grid-column: span 2;  /* Para que algunos divs se extiendan sobre dos columnas */
     }
+}
 
-    /* Asegurar que los textos en el menú estén centrados */
-    header {
-        text-align: center; /* Centra los elementos del header */
-    }
+/**/
 
-    footer {
-        text-align: center; /* Centra el texto del pie de página */
-    }
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Roboto, sans-serif;
+}
+/* Mobile View ***************/
+#menu {
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	background-color: #eee;
+	color: #000;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+nav {
+	background-color: #ace;
+}
+.navigation {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 760px;
+}
+
+.navigation li {
+	display: none;
+}
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover, navigation a:active {
+	color: white;
+	background-color: white;
+}
+
+.show li {
+	display: block;
+}
+
+#menu.show::before {
+	content: "X";
+}
+
+/* Media Query for wider than mobile viewports. Breakpoint should be based upon the design and content and use em units to be relative to the user's font size versus fixed with pixels.  
+
+In most WDD courses there is a requirement to use a separate file. This part would go into a separate CSS file. 
+*/
+@media only screen and (min-width: 40em) {
+	.navigation {
+		display: flex;
+	}
+	.navigation li {
+		display: block; /* change state in small view */
+		flex: 1 1 100%;
+	}
+	.navigation a {
+		text-align: center;
+	}
+	#menu {
+		display: none;
+	}
 }
