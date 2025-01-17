@@ -82,11 +82,19 @@ main {
     margin-bottom: 20px; /* Espacio entre el título y la cuadrícula */
 }
 
+
 .main-title {
     text-align: center; /* Centra el título */
     font-size: 2rem; /* Tamaño de fuente adecuado */
     margin-bottom: 20px; /* Espacio debajo del título */
 }
+
+section.h3{
+    text-align: center; /* Centra el título */
+    font-size: 2rem; /* Tamaño de fuente adecuado */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
 
 /* Estilos para la cuadrícula de imágenes */
 .image-grid {
