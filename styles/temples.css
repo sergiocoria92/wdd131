@@ -94,12 +94,11 @@
         filter: saturate(50%);
     }
 
-    .shape-outside {
-        float: left;  /* Agrega el flotado */
-        border-radius: 100px;
+    .float-rounded {
+        float: left;
+        border-radius: 50%; /* Esto crea una forma circular */
         width: 35%;
-        margin: 0 3em .5em 0;
-        shape-outside: circle();
+        margin: 0 3em 0.5em 0;
     }
     
     .mbm-difference {
