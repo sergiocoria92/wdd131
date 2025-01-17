@@ -35,6 +35,7 @@
         padding: .5rem;
     }
 
+    /* Cambiar el comportamiento de la cuadrícula para las imágenes */
     .container {
         display: grid;
         grid-template-columns: 1fr;  /* Para móviles, usar una columna */
@@ -45,16 +46,20 @@
     figure {
         background-color: #fff;
         display: block;  /* Asegúrate que figure se comporta como bloque */
+        width: 100%; /* Hacemos que figure ocupe el 100% */
+        margin: 1rem auto;
     }
 
-    img {
-        width: 100%;
+    figure img {
+        width: 100%; /* Las imágenes ocuparán todo el ancho disponible */
         height: auto;
         margin: .5rem;
     }
 
     figcaption {
-        font-size: smaller;
+        font-size: 1rem; /* Tamaño de la fuente más grande en móviles */
+        text-align: center;
+        margin-top: 10px;
     }
 
     /* Hover effect */
@@ -62,95 +67,61 @@
         box-shadow: 0 0 50px #333;
     }
 
-    /* Rounded corners - boxmodel */
-    .rocorn {
-        border-radius: 15px 150px;
-    }
-
-    /* Simple opacity effects */
-    .opac {
-        opacity: .5;
-    }
-
-    .blur {
-        filter: blur(4px);
-    }
-
-    .gray {
-        filter: blur(1px) grayscale(50%);
-    }
-
-    .object {
-        width: 100%;
-        height: 75px;
-        object-fit: cover;
-    }
-
-    .contrast {
-        filter: contrast(50%);
-    }
-
-    .saturate {
-        filter: saturate(50%);
-    }
-
-    .shape-outside {
-        border-radius: 100px;
-        width: 35%;
-        margin: 0 3em .5em 0;
-        float: left;
-        shape-outside: circle();
-    }
-
-    .mbm-difference {
-        mix-blend-mode: difference;
-    }
-
-    .mbm-hard-light {
-        mix-blend-mode: hard-light;
-    }
-
-    .transform {
-        transform: scaleX(-1);
-    }
-
-    .turn {
-        rotate: .05turn;
-        border: 1px solid rgba(0,0,0,.3);
-        padding: 1px;
-    }
-
-    .mosaic {
-        position: relative;
-        width: 90%;
-    }
-
-    .mosaic img {
-        width: 100%;
+    /* Menú de navegación en dispositivos móviles: convertir a un menú desplegable */
+    nav ul {
+        display: block; /* Muestra los enlaces en una sola columna */
+        padding: 0;
         margin: 0;
+        list-style: none;
     }
 
-    /* Para la cuadrícula de imágenes */
+    nav a {
+        display: block; /* Cada enlace ocupará toda una línea */
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+        font-size: larger;
+        background-color: #003366;
+        margin: 5px 0; /* Añadir un margen entre los enlaces */
+    }
+
+    nav a:hover {
+        text-decoration: underline double;
+        background-color: #eee;
+        color: #000;
+    }
+
+    .active {
+        color: yellow;
+    }
+
+    /* Hacer que las imágenes y su contenedor se alineen en una columna */
     .pic {
         background: #fff;
-        display: grid;
-        grid-template-columns: 1fr 1fr;  /* Para pantallas pequeñas, usar dos columnas */
-        grid-gap: 7px;
-        position: relative;
-        width: 100%;
-        mix-blend-mode: lighten; /* Prueba con otras combinaciones como darken o overlay */
+        display: block; /* Apilar las imágenes en una sola columna */
+        margin-top: 1rem;
     }
 
     .pic div {
         background: #000;
-        height: 18.5vw;
-        max-height: 320px;  /* Ajusta la altura en móviles */
+        height: 25vw; /* Hacer las imágenes más grandes en móviles */
+        max-height: 320px;  /* Control de altura en dispositivos pequeños */
     }
 
     /* Cambiar la distribución de los elementos para pantallas pequeñas */
     .pic div:nth-of-type(3),
     .pic div:nth-of-type(8),
     .pic div:nth-of-type(13) {
-        grid-column: span 2;  /* Para que algunos divs se extiendan sobre dos columnas */
+        grid-column: span 1;  /* No hacer que algunos divs se extiendan sobre varias columnas */
+    }
+
+    /* Asegurar que los textos en el menú estén centrados */
+    header {
+        text-align: center; /* Centra los elementos del header */
+    }
+
+    footer {
+        text-align: center; /* Centra el texto del pie de página */
     }
 }
