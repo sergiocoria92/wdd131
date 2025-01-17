@@ -1,0 +1,159 @@
+/*.kanit-light {
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: normal;
+  }*/
+
+
+  * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Sansita", sans-serif;
+}
+
+/* mobile **************************/
+header {
+	background-color: #F5F5DC;
+	display: grid;
+	grid-gap: 1rem;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 30px #003366;
+}
+
+header,
+main {
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+nav {
+	background-color: #003366;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: larger;
+}
+
+nav a:hover {
+	text-decoration: underline double;
+	background-color: #eee;
+	color: #000;
+}
+
+.active {
+	color: yellow;
+}
+
+/* Larger Views ******************************/
+@media (min-width: 740px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav ul {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+	nav a {
+		flex: 1 1 100%;
+	}
+}
+
+/*ESTE ESTILO HACE QUE AL NAVEGAR O PASAR EL MOUSE CAMBIEN DE COLOR*/
+/* Estilo inicial para los enlaces */
+nav a {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quitar el subrayado */
+    padding: 10px;
+    transition: color 0.3s ease; /* Animación suave al cambiar el color */
+}
+
+/* Estilo cuando se pasa el cursor sobre los enlaces */
+nav a:hover {
+    color: #FF6347; /* Color rojo tomate cuando se pasa el cursor */
+}
+
+main { 
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+
+
+  /************************/
+
+
+
+/**/
+
+/* Centramos el título h1 *//* Centramos el título h1 */
+h1 {
+    text-align: center; /* Centra el texto */
+    font-size: 2rem; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Un pequeño espacio debajo del título */
+}
+
+/* Estilos para el contenedor <figure> */
+figure {
+    display: grid; /* Utilizamos grid para las imágenes */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual tamaño */
+    gap: 1rem; /* Espacio entre las imágenes */
+    padding: 0;
+    margin: 0;
+    justify-items: center; /* Centra las imágenes dentro de sus celdas */
+}
+
+/* Estilos para cada <div> dentro del <figure> */
+figure div {
+    display: flex; /* Usamos flexbox para el contenido dentro de cada div */
+    flex-direction: column; /* Alinea la imagen y la leyenda en una columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para las imágenes */
+figure div img {
+    width: 100%; /* Las imágenes ocupan todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes se ajusten sin deformarse */
+}
+
+/* Estilos para las leyendas (figcaption) de la imagen*/
+figcaption {
+    font-size: 1rem; /* Tamaño de fuente de la leyenda */
+    margin-top: 5px; /* Un poco de espacio entre la imagen y la leyenda */
+}
+
+
+footer {
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 20px 0; /* Espaciado arriba y abajo */
+    background-color: #F5F5DC; /* Fondo opcional para el pie de página */
+}
+
+footer p {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 1rem; /* Tamaño de fuente opcional */
+}
