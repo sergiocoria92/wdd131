@@ -4,6 +4,16 @@
     .meerkat-image {
         content: url("images/meerkat"); /* Ruta de la imagen para móviles */
         height: auto; /* Ajusta la altura de acuerdo con la imagen */
+        
+    }
+    /* Asegura que las cajas de info estén debajo de la imagen */
+    .info-box, .info-box2 {
+        margin-top: 20px; /* Espaciado entre la imagen y las cajas */
+    }
+    /* Esto asegura que el contenedor principal se ajuste en móviles */
+    main {
+        display: block;
+        padding: 10px;
     }
 
 
