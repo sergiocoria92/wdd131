@@ -1,4 +1,4 @@
-/* Estilos para el header */
+@media (min-width: 768px) {/* Estilos para el header */
 header {
     background-color: red; /* Fondo rojo */
     padding: 50px 0; /* Aumenta el tamaño del header (espaciado arriba y abajo) */
@@ -106,4 +106,4 @@ footer {
 footer p {
     margin: 0; /* Elimina el margen predeterminado */
     font-size: 1rem; /* Tamaño de fuente (ajustable) */
-}
+}}
