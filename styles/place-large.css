@@ -32,7 +32,6 @@ body {
 
 
 .info-box {
-  position: absolute;
   top: 20px;
   left: 20px;
   background: rgba(255, 255, 255, 0.9);
@@ -54,7 +53,6 @@ body {
 
 
 .info-box2 {
-    position: absolute;
     bottom: 20px;
     right: 20px;
     background: rgba(255, 255, 255, 0.9);
@@ -69,7 +67,7 @@ body {
     color: #006400;
   }
   
-  .info-box2 p {
+  .info-box p, .info-box2 p {
     margin: 5px 0;
   }
 
@@ -79,6 +77,9 @@ body {
 .meerkat-image {
     width: 100%;
     height: 700px;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+    display: block; /* Evita que se superponga a los otros elementos */
+    margin-bottom: 40px; /* Espaciado debajo de la imagen */
 }
 
 footer {

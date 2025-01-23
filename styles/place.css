@@ -1,20 +1,21 @@
-@media (max-width: 768px) {
-    /* Estilos específicos para móviles */
+@media (max-width: 767px) {
+    main {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Alinea al centro horizontalmente */
+        justify-content: flex-start; /* Alinea hacia el top */
+        padding: 20px;
+    }
+
 
     .meerkat-image {
-        content: url("images/meerkat"); /* Ruta de la imagen para móviles */
-        height: auto; /* Ajusta la altura de acuerdo con la imagen */
-        
+        height: auto; /* Ajusta la altura dependiendo de la imagen */
+        margin-bottom: 20px; /* Mantén el espacio debajo */
+
     }
-    /* Asegura que las cajas de info estén debajo de la imagen */
-    .info-box, .info-box2 {
-        margin-top: 20px; /* Espaciado entre la imagen y las cajas */
-    }
-    /* Esto asegura que el contenedor principal se ajuste en móviles */
-    main {
-        display: block;
-        padding: 10px;
-    }
+
+
 
 
 
