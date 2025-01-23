@@ -21,20 +21,20 @@ header p {
 
 body {
     font-family: Arial, sans-serif;
-    background: url('imagen.jpg') no-repeat center center fixed;
     background-size: cover;
   }
   
-  .info-box {
-    position: relative;
-    top: 20px;
-    left: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-  }
+/* Estilo para la caja .info-box */
+.info-box {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    width: 300px; /* Ancho fijo para la caja */
+    margin-top: 160px; /* Espaciado desde el top para separar la caja del header */
+    margin-left: 20px; /* Opcional: Ajuste a la izquierda si deseas espacio desde el borde */
+}
+
   
   .info-box h2 {
     margin-top: 0;
@@ -42,34 +42,23 @@ body {
   }
 
 
-.info-box {
-  top: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-}
-
-.info-box h2 {
-  margin-top: 0;
-  color: #006400;
-}
-
 
 /*bloque 2*/
 
-
 .info-box2 {
-    bottom: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-  }
+    position: absolute; /* Asegura que el elemento se posicione en relación al contenedor */
+    bottom: 20px; /* Espacio desde el fondo de la ventana */
+    top:200px;
+    right: 20px; /* Ajuste de posición desde el lado izquierdo */
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    width: 300px; /* Ancho fijo para la caja */
+}
+
+
+
   
   .info-box2 h2 {
     margin-top: 0;
