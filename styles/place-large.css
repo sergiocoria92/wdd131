@@ -25,15 +25,25 @@ body {
   }
   
 /* Estilo para la caja .info-box */
+
+
 .info-box {
+    position: absolute; /* Asegura que el elemento se posicione en relación al contenedor */
+    bottom: 20px; /* Espacio desde el fondo de la ventana */
+    top:200px;
+    left: 20px; /* Ajuste de posición desde el lado izquierdo */
     background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
     border-radius: 10px; /* Bordes redondeados */
     padding: 20px; /* Espaciado interior */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
     width: 300px; /* Ancho fijo para la caja */
-    margin-top: 160px; /* Espaciado desde el top para separar la caja del header */
-    margin-left: 20px; /* Opcional: Ajuste a la izquierda si deseas espacio desde el borde */
+    height: 350px;
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto */
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera de la caja */
+
 }
+
+
 
   
   .info-box h2 {
@@ -42,19 +52,22 @@ body {
   }
 
 
-
 /*bloque 2*/
 
 .info-box2 {
     position: absolute; /* Asegura que el elemento se posicione en relación al contenedor */
     bottom: 20px; /* Espacio desde el fondo de la ventana */
-    top:200px;
+    top:300px;
     right: 20px; /* Ajuste de posición desde el lado izquierdo */
     background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
     border-radius: 10px; /* Bordes redondeados */
     padding: 20px; /* Espaciado interior */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
     width: 300px; /* Ancho fijo para la caja */
+    height: 350px;
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto */
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera de la caja */
+
 }
 
 
@@ -63,6 +76,9 @@ body {
   .info-box2 h2 {
     margin-top: 0;
     color: #006400;
+    padding-bottom: 10px; /* Espacio debajo del h2 para separarlo de otros elementos */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste dentro de la caja */
+
   }
 
 

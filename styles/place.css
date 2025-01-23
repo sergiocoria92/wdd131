@@ -7,48 +7,41 @@
         justify-content: flex-start; /* Alinea hacia el top */
     }
 
+
+    .meerkat-image {
+        height: auto; /* Ajusta la altura dependiendo de la imagen */
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+        background-size: cover;
+        display: block; /* Evita que la imagen se sobreponga */
+        margin-bottom: 20px; /* Agrega un espacio debajo de la imagen */
+    }
+
+    /* Estilos para las cajas en pantallas móviles */
     .info-box, .info-box2 {
-        background-color: #f4f4f4; /* Fondo gris claro */
-        margin-top: 0px; /* Espaciado entre las cajas */
+        background-color: #f4f4f4;  /* Fondo gris claro */
+        margin-top: 20px; /* Espaciado entre las cajas */
         border-radius: 8px; /* Bordes redondeados */
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
         width: 80%; /* Las cajas ocupan el 80% del ancho disponible */
         max-width: 400px; /* Ancho máximo para que no sean demasiado grandes */
         position: relative; /* Asegura que las cajas se comporten en el flujo normal */
-   
-
-
-    .meerkat-image {
-        height: auto; /* Ajusta la altura dependiendo de la imagen */
-        background-size: cover;
-
     }
 
-    /*checar:*/
-
-
-    .info-box {
-        margin-top: 20px; /* Espaciado superior para la caja info-box */
+    .info-box h2, .info-box2 h2 {
+        margin-top: 0;
+        color: #006400;
     }
 
-    .info-box2 {
-        margin-top: 20px; /* Espaciado superior para la caja info-box2 */
-    }
 
-    .meerkat-image {
-        height: auto; /* Ajusta la altura dependiendo de la imagen */
-    }
-}
-
+    
 
     footer p {
         font-size: 0.9rem; /* Ajusta el tamaño de fuente en pantallas pequeñas */
     }
 
-
-
-
-
-
-
 }
+
+
+
+
+
