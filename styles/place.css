@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    /* Estilos específicos para móviles */
+
+    .meerkat-image {
+        content: url("images/meerkat"); /* Ruta de la imagen para móviles */
+        height: auto; /* Ajusta la altura de acuerdo con la imagen */
+    }
+
+
+
+
+
+}
