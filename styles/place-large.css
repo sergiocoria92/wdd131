@@ -1,17 +1,32 @@
+/* Estilos para el header */
 header {
-    background-color:  red;
+    background-color: red; /* Fondo rojo */
+    padding: 50px 0; /* Aumenta el tamaño del header (espaciado arriba y abajo) */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: white; /* Texto blanco */
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    position: relative; /* Asegura que los elementos dentro del header estén en flujo normal */
+    z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+    border-bottom: 10px solid green; /* Línea verde de 3px debajo del header */
+
+}
+
+/* Estilos para el texto dentro del header */
+header p {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 3rem; /* Aumenta el tamaño del texto dentro del header */
+    font-weight: bold; /* Acentúa el texto */
+    letter-spacing: 2px; /* Opcional, para dar un poco de espacio entre las letras */
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
     background: url('imagen.jpg') no-repeat center center fixed;
     background-size: cover;
   }
   
   .info-box {
-    position: absolute;
+    position: relative;
     top: 20px;
     left: 20px;
     background: rgba(255, 255, 255, 0.9);
@@ -24,10 +39,6 @@ body {
   .info-box h2 {
     margin-top: 0;
     color: #006400;
-  }
-  
-  .info-box p {
-    margin: 5px 0;
   }
 
 
@@ -46,9 +57,7 @@ body {
   color: #006400;
 }
 
-.info-box p {
-  margin: 5px 0;
-}
+
 /*bloque 2*/
 
 
@@ -66,10 +75,6 @@ body {
     margin-top: 0;
     color: #006400;
   }
-  
-  .info-box p, .info-box2 p {
-    margin: 5px 0;
-  }
 
 
 
@@ -84,4 +89,16 @@ body {
 
 footer {
     background-color: red;
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+
+
+}
+
+footer p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 1rem; /* Tamaño de fuente (ajustable) */
 }
