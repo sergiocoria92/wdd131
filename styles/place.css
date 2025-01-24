@@ -3,13 +3,13 @@
 
     header {
         background-color: red; /* Fondo rojo */
-        padding: 10px 0; /* Aumenta el tamaño del header (espaciado arriba y abajo) */
+        padding: 1px 0; /* Aumenta el tamaño del header (espaciado arriba y abajo) */
         text-align: center; /* Centra el texto horizontalmente */
         color: white; /* Texto blanco */
         font-size: 2rem; /* Tamaño de fuente más grande */
         position: relative; /* Asegura que los elementos dentro del header estén en flujo normal */
         z-index: 1000; /* Asegura que el header esté encima de otros elementos */
-        border-bottom: 10px solid green; /* Línea verde de 3px debajo del header */
+        border-bottom: 15px solid green; /* Línea verde de 3px debajo del header */
     
     }
     /* Diseño general para main */
