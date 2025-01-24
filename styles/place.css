@@ -2,12 +2,12 @@
 @media (max-width: 767px) {
 
     header {
+        position: relative; /* Asegura que los elementos dentro del header estén en flujo normal */
         background-color: red; /* Fondo rojo */
         padding: 1px 0; /* Aumenta el tamaño del header (espaciado arriba y abajo) */
         text-align: center; /* Centra el texto horizontalmente */
         color: white; /* Texto blanco */
         font-size: 2rem; /* Tamaño de fuente más grande */
-        position: relative; /* Asegura que los elementos dentro del header estén en flujo normal */
         z-index: 1000; /* Asegura que el header esté encima de otros elementos */
         border-bottom: 15px solid green; /* Línea verde de 3px debajo del header */
     
@@ -32,13 +32,13 @@
 
     /* Estilos para las cajas info-box e info-box2 en móviles */
     .info-box, .info-box2 {
+        position: relative; /* Cambia de absolute a relative */
         background-color: #f4f4f4;
         margin-top: 20px; /* Espaciado entre las cajas */
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         width: 80%; /* Las cajas ocupan el 80% del ancho */
         max-width: 400px; /* Limita el ancho máximo */
-        position: relative; /* Cambia de absolute a relative */
         padding: 20px;
         box-sizing: border-box; /* Incluye padding dentro del tamaño de la caja */
         overflow: hidden; /* Evita que el contenido se desborde */
@@ -51,8 +51,9 @@
 
 
     h2 {
-        display: inline-block; /* Asegura que el encabezado se comporte como un bloque pero permita la disposición de otros elementos en línea */
         position: relative; /* Establece un contexto para posicionar la imagen */
+        display: inline-block; /* Asegura que el encabezado se comporte como un bloque pero permita la disposición de otros elementos en línea */
+     
     }
     
     .weather-icon {
@@ -70,12 +71,13 @@
 
 
     footer {
+        position: relative;
         background-color: red;
         color: white; /* Texto blanco */
         text-align: center; /* Centra el texto horizontalmente */
         margin: 0;
         padding: 10px 0;
-        position: relative;
+
     
     
     }
