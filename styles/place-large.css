@@ -3,12 +3,13 @@
     font-weight: 200;
     font-style: normal;
   }*/
-:root {
+  :root {
     --font-family: "Kanit", serif;
-  }
+    --primary-color: red;
+    --secondary-color: green;
+    --text-color: white;
+}
 
-
-  
 @media (min-width: 768px) {/* Estilos para el header */
 header {
     position: relative; /* Asegura que los elementos dentro del header estén en flujo normal */
@@ -31,7 +32,7 @@ header h1 {
 }
 
 body {
-    font-family: "Kanit", serif;
+    font-family: var(--font-family);
     font-weight: 200;
     font-style: normal;
     background-size: cover;
@@ -53,7 +54,7 @@ body {
     height: 350px;
     box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto */
     overflow: hidden; /* Asegura que el contenido no se desborde fuera de la caja */
-    opacity: .7; /* 50% de opacidad (semi-transparente) */
+    opacity: 0.7; /* 50% de opacidad (semi-transparente) */
 }
 
 
@@ -101,7 +102,14 @@ body {
     margin-right: 8px; /* Añade un pequeño espacio entre el ícono y el texto */
 }
 
-
+/* Usando pseudo-elemento para el ícono del clima */
+.weather::after {
+    content: url('path-to-your-weather-icon.png');
+    display: inline-block;
+    width: 30px; /* Ajusta según necesites */
+    height: auto;
+    margin-left: 10px;
+  }
 
 /*imagen*/
 .meerkat-image {
