@@ -3,7 +3,12 @@
     font-weight: 200;
     font-style: normal;
   }*/
+:root {
+    --font-family: "Kanit", serif;
+  }
 
+
+  
 @media (min-width: 768px) {/* Estilos para el header */
 header {
     position: relative; /* Asegura que los elementos dentro del header estén en flujo normal */
