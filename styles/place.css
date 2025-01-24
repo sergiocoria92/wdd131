@@ -49,6 +49,26 @@
         color: #006400;
     }
 
+
+    h2 {
+        display: inline-block; /* Asegura que el encabezado se comporte como un bloque pero permita la disposición de otros elementos en línea */
+        position: relative; /* Establece un contexto para posicionar la imagen */
+    }
+    
+    .weather-icon {
+        position: absolute; /* La imagen se coloca de manera absoluta dentro de su contenedor */
+        top: 100%; /* La imagen se coloca justo debajo del h2 */
+        left: 0; /* Alinea la imagen a la izquierda del contenedor */
+        width: 20px; /* Ajusta el tamaño de la imagen */
+        height: auto; /* Mantiene la proporción */
+        margin-top: 5px; /* Agrega un poco de espacio entre el texto y la imagen */
+    }
+
+
+
+
+
+
     footer {
         background-color: red;
         color: white; /* Texto blanco */

@@ -81,6 +81,13 @@ body {
 
   }
 
+  .weather-icon {
+    width: 20px; /* Ajusta el tamaño según lo que necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    vertical-align: middle; /* Alinea verticalmente la imagen con el texto */
+    margin-right: 8px; /* Añade un pequeño espacio entre el ícono y el texto */
+}
+
 
 
 /*imagen*/
