@@ -12,7 +12,7 @@ header {
 }
 
 /* Estilos para el texto dentro del header */
-header p {
+header h1 {
     margin: 0; /* Elimina márgenes por defecto */
     font-size: 3rem; /* Aumenta el tamaño del texto dentro del header */
     font-weight: bold; /* Acentúa el texto */
