@@ -4,12 +4,10 @@
     font-style: normal;
   }*/
   :root {
+    --font-family: "Kanit", serif;
     --primary-color: red;
     --secondary-color: green;
     --text-color: white;
-  }
-  :root {
-    --font-family: "Kanit", serif;
 
 }
 
