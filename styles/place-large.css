@@ -5,9 +5,12 @@
   }*/
   :root {
     --primary-color: red;
+    --secondary-color: green;
+    --text-color: white;
   }
   :root {
     --font-family: "Kanit", serif;
+
 }
 
 @media (min-width: 768px) {/* Estilos para el header */
