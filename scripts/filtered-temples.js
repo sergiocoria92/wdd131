@@ -60,11 +60,30 @@ const temples = [
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
     },
     {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
+        templeName: "Guadalajara México",
+        location: "Zapopan, Jalisco",
+        dedicated: "1999, april, 14",
+        area: 10700,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/_temp/105-Guadalajara-Mexico-Temple.jpg"
+    },
+    {
+        templeName: "México City México",
+        location: "México City, México",
         dedicated: "1983, December, 2",
         area: 116642,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    },    {
+        templeName: "Colonia Juárez Chihuahua México",
+        location: "Colonia Juárez Chihuahua México",
+        dedicated: "1997, october, 4",
+        area: 6800,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/colonia-juarez-chihuahua-mexico-temple/colonia-juarez-chihuahua-mexico-temple-1601-main.jpg"
+    },    {
+        templeName: "Monterrey México",
+        location: "Monterrey, México",
+        dedicated: " 1995, December, 21",
+        area: 16498,
+        imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/monterrey-mexico-temple/monterrey-mexico-temple-1068-main.jpg"
     },
 ];
 
