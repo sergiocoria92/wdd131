@@ -1,0 +1,218 @@
+/* Estilos generales */
+
+/*.kanit-light {
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: normal;
+}*/
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Estilos específicos para móviles */
+
+    .stdlf {
+        font-weight: 700;
+        border-bottom: 1px solid #777;
+        margin-bottom: 1rem;
+    }
+
+    body {
+        font-family: Roboto, sans-serif;
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño para móviles */
+    }
+
+    h3 {
+        font-size: 1.2rem; 
+        color: darkgreen;
+    }
+
+    section {
+        margin: 1rem auto;
+        max-width: 100%; /* Asegúrate de que no se corte */
+        padding: .5rem;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;  /* Para móviles, usar una columna */
+        grid-gap: 25px;
+        place-items: center;
+    }
+
+    figure {
+        background-color: #fff;
+        display: block;  /* Asegúrate que figure se comporta como bloque */
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        margin: .5rem;
+    }
+
+    figcaption {
+        font-size: smaller;
+    }
+
+    /* Hover effect */
+    .hover:hover {
+        box-shadow: 0 0 50px #333;
+    }
+
+    /* Rounded corners - boxmodel */
+    .rocorn {
+        border-radius: 15px 150px;
+    }
+
+    /* Simple opacity effects */
+    .opac {
+        opacity: .5;
+    }
+
+    .blur {
+        filter: blur(4px);
+    }
+
+    .gray {
+        filter: blur(1px) grayscale(50%);
+    }
+
+    .object {
+        width: 100%;
+        height: 75px;
+        object-fit: cover;
+    }
+
+    .contrast {
+        filter: contrast(50%);
+    }
+
+    .saturate {
+        filter: saturate(50%);
+    }
+
+    .float-rounded {
+        float: left;
+        border-radius: 50%; /* Esto crea una forma circular */
+        width: 35%;
+        margin: 0 3em 0.5em 0;
+    }
+    
+    .mbm-difference {
+        mix-blend-mode: difference;
+    }
+
+    .mbm-hard-light {
+        mix-blend-mode: hard-light;
+    }
+
+    .transform {
+        transform: scaleX(-1);
+    }
+
+    .turn {
+        transform: rotate(18deg);  /* Usa grados en lugar de turn */
+        border: 1px solid rgba(0, 0, 0, .3);
+        padding: 1px;
+    }
+
+    .mosaic {
+        position: relative;
+        width: 90%;
+    }
+
+    .mosaic img {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Para la cuadrícula de imágenes */
+    .pic {
+        background: #fff;
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* Para pantallas pequeñas, usar dos columnas */
+        grid-gap: 7px;
+        position: relative;
+        width: 100%;
+        mix-blend-mode: lighten; /* Prueba con otras combinaciones como darken o overlay */
+    }
+
+    .pic div {
+        background: #000;
+        height: 18.5vw;
+        max-height: 320px;  /* Ajusta la altura en móviles */
+    }
+
+    /* Cambiar la distribución de los elementos para pantallas pequeñas */
+    .pic div:nth-of-type(3),
+    .pic div:nth-of-type(8),
+    .pic div:nth-of-type(13) {
+        grid-column: span 2;  /* Para que algunos divs se extiendan sobre dos columnas */
+    }
+
+/**/
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: Roboto, sans-serif;
+}
+/* Mobile View ***************/
+#menu {
+	display: block;
+	font-size: 2rem;
+	font-weight:700;
+	text-decoration: none;
+	padding: .5rem .75rem;
+	background-color: #eee;
+	color: #000;
+}
+
+#menu::before {
+	content: "≡";
+}
+
+nav {
+	background-color: #ace;
+}
+.navigation {
+	list-style: none;
+	margin: 0 auto;
+	max-width: 760px;
+}
+
+.navigation li {
+	display: none;
+}
+.navigation a {
+	display: block;
+	padding: 0.75rem;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	transition: 0.5s;
+	font-size: clamp(1rem, 2vmin, 1.5rem);
+}
+
+.navigation a:hover, navigation a:active {
+	color: white;
+	background-color: white;
+}
+
+.show li {
+	display: block;
+}
+
+#menu.show::before {
+	content: "X";
+}}
+
+
