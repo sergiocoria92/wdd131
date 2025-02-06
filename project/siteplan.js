@@ -7,3 +7,13 @@ if (lastModifiedElement) {
     console.log('Could not find the element with the id "lastModified"');
 }
 
+
+
+const mainnav = document.querySelector('.navigation');
+const hambutton = document.querySelector('#menu');
+
+// Añade un listener de click para alternar la clase "show"
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+});

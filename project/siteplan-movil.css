@@ -1,43 +1,58 @@
-
-/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
-    
-    h1 {
-        background-color: green;
-        text-align: center;
-        margin: 0%;
-        padding: 0%;
-        margin-bottom: 0;
+    /* Estilos específicos para móviles */
+    #menu {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        background-color: #eee;
+        color: #000;
+        cursor: pointer;
     }
 
-    /* Ocultamos el menú en pantallas pequeñas por defecto */
-    nav ul {
-        display: none;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 60px; /* Asegura que el menú no se superponga al contenido */
-        left: 0;
-        background-color: greenyellow;
+    #menu::before {
+        content: "≡"; /* Ícono de hamburguesa */
     }
 
-    /* Mostramos el icono de hamburguesa solo en pantallas pequeñas */
-    .menu-icon {
+    nav {
+        background-color: #ace;
+    }
+
+    .navigation {
+        list-style: none;
+        margin: 0 auto;
+        max-width: 760px;
+    }
+
+    .navigation li {
+        display: none; /* Esconde los enlaces por defecto */
+    }
+
+    .navigation a {
+        display: block;
+        padding: 0.75rem;
+        text-align: left;
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+        transition: 0.5s;
+        font-size: clamp(1rem, 2vmin, 1.5rem);
+    }
+
+    .navigation a:hover,
+    .navigation a:active {
+        color: white;
+        background-color: white;
+    }
+
+    /* Mostrar los enlaces cuando la clase "show" está activa */
+    .navigation.show li {
         display: block;
     }
 
-    /* Estilo para los enlaces del menú hamburguesa */
-    nav ul li {
-        border-top: 1px solid #000;
+    /* Cambiar el ícono de hamburguesa a una "X" cuando el menú está activo */
+    #menu.show::before {
+        content: "X"; /* Cambio del ícono */
     }
-
-    nav ul li:first-child {
-        border-top: none;
-    }
-
-
-/* Cuando el menú hamburguesa se active */
-nav ul.active {
-    display: block; /* Muestra el menú */
-
-}}
+}
