@@ -1,0 +1,43 @@
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    
+    h1 {
+        background-color: green;
+        text-align: center;
+        margin: 0%;
+        padding: 0%;
+        margin-bottom: 0;
+    }
+
+    /* Ocultamos el menú en pantallas pequeñas por defecto */
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px; /* Asegura que el menú no se superponga al contenido */
+        left: 0;
+        background-color: greenyellow;
+    }
+
+    /* Mostramos el icono de hamburguesa solo en pantallas pequeñas */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Estilo para los enlaces del menú hamburguesa */
+    nav ul li {
+        border-top: 1px solid #000;
+    }
+
+    nav ul li:first-child {
+        border-top: none;
+    }
+
+
+/* Cuando el menú hamburguesa se active */
+nav ul.active {
+    display: block; /* Muestra el menú */
+
+}}

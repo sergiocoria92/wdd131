@@ -1,0 +1,129 @@
+/*.kanit-thin {
+    font-family: "Kanit", serif;
+    font-weight: 100;
+    font-style: normal;
+  }*/
+h1 {
+    background-color: #ffee58 ;
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    margin-bottom: 0;
+    font-family: "Kanit", serif
+}
+/* Estilos generales para la barra de navegación */
+
+nav {
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;  /* Centra los elementos horizontalmente */
+    align-items: center;      /* Centra los elementos verticalmente */
+    padding: 0; /* Elimina el padding de la barra de navegación */
+}
+
+/* Estilo para la lista de enlaces */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row; /* Alineación horizontal por defecto */
+    padding: 0;  /* Elimina el padding de la lista */
+    margin: 0;   /* Elimina el margen de la lista */
+}
+
+/* Estilo para los enlaces */
+nav a {
+    display: block;
+    color: #333333;
+    text-align: center;
+    padding: 0.5rem 1rem; /* Añade espacio alrededor de las letras, más ancho para clickeo */
+    text-decoration: none;
+    font-size: larger;
+    font-family: "Kanit", serif;
+    margin: 0;   /* Elimina cualquier margen alrededor de los enlaces */
+}
+
+/* Efecto hover en los enlaces */
+nav a:hover {
+    text-decoration: underline;
+    color: #000;
+
+}
+
+
+/*imagen y cuerpo*/
+
+/* Asegúrate de que la imagen ocupe todo el ancho de la pantalla */
+.image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0%;
+}
+
+.image-container img {
+    width: 100%; /* La imagen ocupa el 100% del ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+/*texto del cuerpo*/
+.text-container p{
+    color: black;
+    font-family: "Kanit", serif;
+    font-size: 58px;
+    
+}
+
+.text-container {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para que el texto esté perfectamente centrado */
+    text-align: center; /* Centra el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega sombra al texto para que resalte sobre la imagen */
+}
+
+/*cuadro*/
+/* Imagen de fondo */
+.image-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0%;
+}
+
+/* Imagen */
+.image-container img {
+    width: 100%; /* La imagen ocupa el 100% del ancho */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Contenedor de texto (No lo modificamos) */
+
+
+/* Cuadro traslúcido sobre la imagen */
+.overview-text {
+    position: absolute;
+    top: 90%; /* Coloca el cuadro un poco más abajo de la mitad */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para que el cuadro quede perfectamente centrado */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad para el efecto traslúcido */
+    padding: 1.5rem; /* Espaciado dentro del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 900px; /* Ancho máximo del cuadro */
+    width: 80%; /* Ancho adaptable al 80% */
+    color: green; /* Color del texto dentro del cuadro */
+    text-align: center; /* Centra el texto */
+    font-size: 20px; /* Tamaño del texto reducido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+
+
+footer p {
+    background-color: aquamarine;
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+    font-family: "Kanit", serif;
+    font-size: 20px; /* Ajusta el tamaño del texto */
+}
