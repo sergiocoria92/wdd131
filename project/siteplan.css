@@ -118,6 +118,41 @@ nav a:hover {
 
 
 
+/*questionario*/
+.questions-container {
+    position: absolute;
+    top: 140%; /* Ajusta la posición según sea necesario */
+    left: 50%; /* Centra el cuadro horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar completamente */
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    padding: 1.5rem; /* Espaciado dentro del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 900px; /* Ancho máximo del cuadro */
+    width: 80%; /* Ancho adaptable al 80% */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.questions {
+    text-align: center; /* Centra el texto dentro del cuadro */
+}
+
+.questions p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-family: "Kanit", serif;
+}
+
+.questions a {
+    text-decoration: none;
+    color: greenyellow; /* Color del enlace */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.questions a:hover {
+    color: yellowgreen; /* Cambio de color al pasar el ratón */
+}
+
 
 footer p {
     background-color: aquamarine;
