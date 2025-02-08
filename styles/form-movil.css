@@ -1,0 +1,33 @@
+/* Estilos para pantallas de hasta 600px (móviles) */
+@media screen and (max-width: 600px) {
+    body {
+        max-width: 100%;
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .stars label {
+        font-size: 20px;
+    }
+
+    textarea, input[type="text"], select, button {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}

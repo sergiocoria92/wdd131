@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, footer {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Centrar la sección de estrellas */
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Ocultar los radio buttons */
+.stars input {
+    display: none;
+}
+
+/* Estilizar las estrellas */
+.stars label {
+    font-size: 30px;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+}
+
+/* Cambio de color al pasar el mouse */
+.stars label:hover,
+.stars label:hover ~ label {
+    color: gold;
+}
+
+/* Cambio de color cuando se selecciona una estrella */
+.stars input:checked ~ label {
+    color: gold;
+}
+
+/* Ocultar las estrellas no seleccionadas al hacer clic */
+.stars input:checked ~ label ~ label {
+    color: gray !important;
+}
+
+.checkbox-group label {
+    display: block;
+}
+
+textarea, input[type="text"], select, button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
