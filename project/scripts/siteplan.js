@@ -17,3 +17,9 @@ hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
+
+
+
+function toggleMenu() {
+    document.querySelector('nav').classList.toggle('active');
+}

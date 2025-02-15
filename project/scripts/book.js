@@ -98,20 +98,28 @@ document.addEventListener("DOMContentLoaded", () => {
     groupSize.addEventListener("change", updateCost);
 });
 
-// Función para crear y agregar las cintas animadas
 function createBanner() {
-    // Crear la cinta izquierda
-    const leftBanner = document.createElement('div');
-    leftBanner.classList.add('banner', 'left'); // Banner para la izquierda
-    leftBanner.innerHTML = '<span>Offer today only 15% discount code: 1234</span>';
-    document.body.appendChild(leftBanner);
+    const isMobile = window.innerWidth <= 768;
 
-    // Crear la cinta derecha
-    const rightBanner = document.createElement('div');
-    rightBanner.classList.add('banner', 'right'); // Banner para la derecha
-    rightBanner.innerHTML = '<span>Offer today only 15% discount code 1234</span>';
-    document.body.appendChild(rightBanner);
+    if (isMobile) {
+        // Crear un solo banner fijo para móviles
+        const topBanner = document.createElement('div');
+        topBanner.classList.add('banner'); // Banner para la parte superior
+        topBanner.innerHTML = '<span>Offer today only 15% discount code: 1234</span>';
+        document.body.appendChild(topBanner);
+    } else {
+        // Crear los banners animados para pantallas grandes
+        const leftBanner = document.createElement('div');
+        leftBanner.classList.add('banner', 'left'); // Banner para el lado izquierdo
+        leftBanner.innerHTML = '<span>Offer today only 15% discount code: 1234</span>';
+        document.body.appendChild(leftBanner);
+
+        const rightBanner = document.createElement('div');
+        rightBanner.classList.add('banner', 'right'); // Banner para el lado derecho
+        rightBanner.innerHTML = '<span>Offer today only 15% discount code: 1234</span>';
+        document.body.appendChild(rightBanner);
+    }
 }
 
-// Llamar la función para agregar las cintas al cargar la página
+// Llamar la función para agregar la cinta al cargar la página
 window.onload = createBanner;
