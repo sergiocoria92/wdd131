@@ -25,8 +25,33 @@ document.addEventListener("DOMContentLoaded", () => {
             rightBanner.classList.add('banner', 'right');
             rightBanner.innerHTML = '<span>Offer today only 15% discount code: 1234</span>';
             document.body.appendChild(rightBanner);
+
+            // Animación de movimiento (NO SE MODIFICÓ)
+            setInterval(() => {
+                leftBanner.style.transform = `translateY(${Math.sin(Date.now() / 500) * 10}px)`;
+                rightBanner.style.transform = `translateY(${Math.sin(Date.now() / 500) * 10}px)`;
+            }, 50);
+        }
+    }
+
+    function setupCalendar() {
+        const dateInput = document.querySelector("#dateInput");
+        if (dateInput) {
+            // Establecer el tipo del input como 'date' desde el principio
+            dateInput.type = 'date';
+
+            dateInput.addEventListener("focus", () => {
+                dateInput.value = ""; // Borra el historial de fechas seleccionadas
+            });
+
+            // Asegurar que el calendario se abre correctamente
+            dateInput.addEventListener("click", () => {
+                dateInput.showPicker?.(); // Intentamos usar showPicker si es soportado
+            });
         }
     }
 
     createBanner();
+    setupCalendar();
 });
+
