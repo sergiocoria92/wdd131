@@ -1,0 +1,66 @@
+/* Estilos generales para móviles */
+@media (max-width: 768px) {
+    /* Título principal */
+    h1 {
+        font-size: 1.5rem; /* Reducir el tamaño de la fuente */
+        padding: 0.5rem; /* Ajustar el padding */
+    }
+
+    /* Barra de navegación */
+    nav {
+        flex-direction: column; /* Cambiar a disposición vertical */
+        padding: 0.5rem; /* Reducir el padding */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambiar a disposición vertical */
+    }
+
+    nav a {
+        padding: 0.5rem; /* Reducir el padding */
+        font-size: 1rem; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Imagen de fondo */
+    .image-container {
+        height: 100vh; /* Mantener la altura completa */
+    }
+
+    .image-container img {
+        width: 100%; /* Asegurar que la imagen ocupe todo el ancho */
+        height: 100%; /* Asegurar que la imagen ocupe toda la altura */
+    }
+
+    /* Título sobre la imagen */
+    .why1 {
+        position: absolute;
+        font-size: 1.5rem; /* Reducir el tamaño de la fuente */
+        top: 10%; /* Ajustar la posición */
+    }
+
+    /* Contenedor de información */
+    .info-container {
+        flex-direction: column; /* Cambiar a disposición vertical */
+        bottom: 5%; /* Ajustar la posición */
+        width: 90%; /* Reducir el ancho */
+        gap: 10px; /* Reducir el espacio entre cuadros */
+    }
+
+    .why2, .why3 {
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .overview-text {
+        font-size: 1rem; /* Reducir el tamaño de la fuente */
+    }
+
+    .why2 img, .why3 img {
+        width: 40px; /* Reducir el tamaño de los iconos */
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 0; /* Reducir el padding */
+        font-size: 0.8rem; /* Reducir el tamaño de la fuente */
+    }
+}

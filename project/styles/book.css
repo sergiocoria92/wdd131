@@ -397,22 +397,22 @@ nav {
 @media (max-width: 768px) {
     /* Estilos generales del banner */
     .banner.mobile {
-        position: fixed; /* Se mantiene en la pantalla */
-        top: 10px; /* Un poco abajo para que no cubra la parte superior */
-        right: 10px; /* Lo coloca en la esquina derecha (cámbialo a 'left: 10px;' si lo quieres en la izquierda) */
-        width: 150px; /* Ancho reducido */
-        background-color: yellow; /* Rojo translúcido */
-        color: white;
-        padding: 5px; /* Menos espacio alrededor */
-        font-size: 0.7rem; /* Aún más pequeño */
+        position: fixed;
+        top: 10px;
+        left: 5px; /* Más pegado al borde izquierdo */
+        width: 120px;
+        background-color: orange;
+        color: black;
+        padding: 5px;
+        font-size: 0.7rem;
         font-weight: bold;
         text-align: center;
-        border-radius: 5px; /* Más redondeo moderado */
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra aún más sutil */
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         z-index: 1000;
         transition: transform 0.2s ease-in-out;
     }
-}
+
 
     
     
@@ -442,7 +442,7 @@ nav {
         width: 80px; /* Ajusta el ancho del banner */
         height: auto;
         writing-mode: vertical-rl; /* Hace que el texto esté en vertical */
-        text-orientation: mixed;}
+        text-orientation: mixed;}}
 
 
     
