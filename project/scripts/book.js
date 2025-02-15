@@ -5,9 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalCost = document.getElementById("totalCost");
     const discountCodeInput = document.getElementById("discountCode");
 
-    let discount = 0; // Variable para el descuento
+    let discount = 0; // Descuento por defecto (sin descuento)
 
-    // Agregar campos para nombres extras
+    // Configurar flatpickr para permitir selección múltiple de fechas
+    const fp = flatpickr(bookingDays, {
+        mode: "multiple", // Permitir la selección de varias fechas
+        dateFormat: "Y-m-d", // Formato de fecha
+        onChange: updateCost // Cada vez que cambian las fechas, actualizar el costo
+    });
+
+    // Agregar campos para nombres extras si se seleccionan más personas
     groupSize.addEventListener("change", () => {
         extraNames.innerHTML = "";
         let peopleCount = parseInt(groupSize.value);
@@ -24,41 +31,46 @@ document.addEventListener("DOMContentLoaded", () => {
                 extraNames.appendChild(input);
             }
         }
+        updateCost(); // Asegurarse de que el costo se actualice si cambian las personas
     });
 
-    // Calcular el costo según los días seleccionados
-    bookingDays.addEventListener("change", () => {
-        let peopleCount = parseInt(groupSize.value);
-        let daysSelected = bookingDays.value.split(",").length || 1;
-        let cost = peopleCount * daysSelected * 100;
-        
+    // Función para actualizar el costo
+    function updateCost() {
+        // Obtener el número de días seleccionados de flatpickr
+        let selectedDates = fp.selectedDates.length; // Número de días seleccionados
+        let peopleCount = parseInt(groupSize.value); // Número de personas
+
+        if (isNaN(peopleCount) || selectedDates === 0) {
+            totalCost.textContent = "$0"; // Si no se seleccionaron fechas o personas, mostrar $0
+            return;
+        }
+
+        let cost = selectedDates * 100 * peopleCount; // Costo total por días y personas
+
         // Aplicar descuento si el código es correcto
-        cost -= cost * discount;
-        totalCost.textContent = cost.toFixed(2);
-    });
+        if (discount > 0) {
+            cost -= cost * discount; // Aplicar descuento
+        }
 
-    // Validar formulario antes de enviar
-    document.getElementById("hikingForm").addEventListener("submit", (e) => {
-        alert("Booking successful! We will contact you soon.");
-        e.preventDefault(); // Evita el envío real del formulario por ahora
-    });
+        // Actualizar el total con 2 decimales
+        totalCost.textContent = "$" + cost.toFixed(2);
+    }
 
-    // Detectar si el código de descuento es correcto
+    // Detectar el código de descuento
     discountCodeInput.addEventListener("input", () => {
         const discountCode = discountCodeInput.value.trim();
         if (discountCode === "1234") {
             discount = 0.15; // 15% de descuento
         } else {
-            discount = 0; // No hay descuento si el código es incorrecto
+            discount = 0; // Sin descuento si el código es incorrecto
         }
 
-        // Actualizar el total con descuento aplicado
-        let peopleCount = parseInt(groupSize.value);
-        let daysSelected = bookingDays.value.split(",").length || 1;
-        let cost = peopleCount * daysSelected * 100;
-        cost -= cost * discount;
-        totalCost.textContent = cost.toFixed(2);
+        // Actualizar el total con el descuento aplicado
+        updateCost();
     });
+
+    // Asegurar que el total se actualice al cambiar el número de personas también
+    groupSize.addEventListener("change", updateCost);
 });
 
 // Función para crear y agregar las cintas animadas

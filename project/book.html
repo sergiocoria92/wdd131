@@ -11,6 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+
 </head>
 <body>
     <nav>
@@ -38,12 +42,14 @@
 
             <label for="groupSize">How many people?</label>
             <select id="groupSize" required>
+                <option value="" disabled selected>Select number of people</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
+            
 
             <div id="extraNames"></div>
 
@@ -62,7 +68,8 @@
 
 
             <label for="bookingDays">What day(s) do you want to book?</label>
-            <input type="date" id="bookingDays" multiple required>
+            <input type="text" id="bookingDays" required>
+            
 
             <p>Total Cost: $<span id="totalCost">0</span></p>
 
