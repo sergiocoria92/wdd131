@@ -394,24 +394,52 @@ nav {
 }
 
 /* Estilos para móviles */
-@media (max-width: 768px) {
-    /* Banner fijo en la parte superior */
-    .banner {
+@media (max-width: 768px){/* Estilos generales del banner */
+    .banner.mobile {
+        position: fixed; /* Se mantiene en la pantalla */
+        top: 10px; /* Un poco abajo para que no cubra la parte superior */
+        right: 10px; /* Lo coloca en la esquina derecha (cámbialo a 'left: 10px;' si lo quieres en la izquierda) */
+        width: 250px; /* Ancho del banner */
+        background-color: rgba(255, 0, 0, 0.7); /* Rojo translúcido */
+        color: white;
+        padding: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    
+    
+    
+    /* Estilos para pantallas grandes */
+    .left {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 200px;
+    }
+    
+    .right {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 200px;
+    }
+        .mobile {
         position: fixed;
-        top: 25%; /* Fijo en la parte superior */
-        width: 100%; /* El banner ocupa todo el ancho de la pantalla */
-        font-size: 16px; /* Ajustar el tamaño del texto */
-        padding: 10px 0; /* Ajustar el espaciado */
-        z-index: 1000; /* Asegura que el banner esté encima de otros elementos */
-    }
-
-    /* Evitar que el contenido quede cubierto por el banner */
-    .container {
-        padding-top: 60px; /* Espacio adicional para el banner */
-    }
-
-    /* Ocultar los banners animados para móviles */
-    .left, .right {
-        display: none;
-    }
+        top: 50%;
+        left: 0; /* Si lo quieres en la derecha, cambia a right: 0; */
+        transform: translateY(-50%);
+        width: 80px; /* Ajusta el ancho del banner */
+        height: auto;
+        writing-mode: vertical-rl; /* Hace que el texto esté en vertical */
+        text-orientation: mixed;}
 }
+
+    
