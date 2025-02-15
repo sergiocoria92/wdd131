@@ -1,0 +1,95 @@
+/* styles/siteplan-movil.css */
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    }
+
+    header {
+        background-color: white; /* Fondo sólido para el header */
+        width: 100%;
+        padding: 10px 0; /* Espaciado interno para el header */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra opcional para el header */
+        position: static; /* El header no se mueve al hacer scroll */
+        z-index: 3; /* Asegura que el header esté por encima de todo */
+    }
+
+    main {
+        flex-grow: 1; /* Ocupa el espacio restante en el body */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px; /* Espaciado general */
+        position: relative; /* Permite posicionar elementos hijos de forma absoluta */
+    }
+
+    .image-container {
+        position: absolute; /* La imagen de fondo se posiciona absolutamente */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1; /* La imagen está detrás de todo */
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    }
+
+    .text-container {
+        position: relative; /* El texto se posiciona relativamente */
+        z-index: 2; /* Está sobre la imagen de fondo */
+        width: 100%;
+        max-width: 400px; /* Limita el ancho para mejor legibilidad */
+        margin-top: 20px; /* Espacio desde el top */
+        text-align: center;
+
+    }
+
+    .overview {
+        position: absolute; /* El cuadro traslúcido se posiciona relativamente */
+        z-index: 2; /* Está sobre la imagen de fondo */
+        width: 90%; /* Ancho del cuadro */
+        max-width: 400px; /* Limita el ancho para mejor legibilidad */
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo traslúcido */
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 160px; /* Espacio entre el título y el cuadro */
+    }
+
+    .questions-container {
+        position: relative; /* Los enlaces se posicionan relativamente */
+        z-index: 2; /* Están sobre la imagen de fondo */
+        width: 100%;
+        max-width: 400px; /* Limita el ancho para mejor legibilidad */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        margin-top: 100px; /* Espacio entre el cuadro y los enlaces */
+    }
+
+    .questions-container a {
+        display: block;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #333;
+        width: 80%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .questions-container a:hover {
+        background-color: #ddd;
+    }
+}
