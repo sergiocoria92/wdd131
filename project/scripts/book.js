@@ -14,6 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
         onChange: updateCost // Cada vez que cambian las fechas, actualizar el costo
     });
 
+    document.addEventListener("DOMContentLoaded", () => {
+        const bookingDays = document.getElementById("bookingDays");
+
+            // Limpiar las fechas seleccionadas antes de inicializar
+    bookingDays.value = '';
+    
+        flatpickr(bookingDays, {
+            mode: "multiple", // Permitir la selección de varias fechas
+            dateFormat: "Y-m-d", // Formato de fecha
+            onChange: updateCost, // Actualizar el costo cuando cambian las fechas
+            clearButton: true, // Asegurar que el botón de borrar funcione
+            allowInput: true // Permite la entrada manual de fechas
+        });
+    });
+    
+
     // Agregar campos para nombres extras si se seleccionan más personas
     groupSize.addEventListener("change", () => {
         extraNames.innerHTML = "";
