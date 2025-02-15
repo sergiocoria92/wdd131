@@ -59,10 +59,9 @@
         z-index: 2; /* Está sobre la imagen de fondo */
         width: 90%; /* Ancho del cuadro */
         max-width: 400px; /* Limita el ancho para mejor legibilidad */
-        background-color: rgba(255, 255, 255, 0.8); /* Fondo traslúcido */
         padding: 15px;
         border-radius: 8px;
-        margin-top: 160px; /* Espacio entre el título y el cuadro */
+        margin-top: 180px; /* Espacio entre el título y el cuadro */
     }
 
     .questions-container {
@@ -75,18 +74,6 @@
         align-items: center;
         gap: 0px;
         margin-top: 100px; /* Espacio entre el cuadro y los enlaces */
-    }
-
-    .questions-container a {
-        display: block;
-        padding: 10px;
-        background-color: #f0f0f0;
-        border-radius: 5px;
-        text-decoration: none;
-        color: #333;
-        width: 80%;
-        max-width: 300px;
-        text-align: center;
     }
 
 }
