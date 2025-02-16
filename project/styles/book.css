@@ -173,3 +173,40 @@ button:hover {
         right: 0; /* Pegado al borde derecho */
     }
 }
+
+/* Corregir los problemas específicos con .flatpickr */
+.flatpickr-calendar:before, .flatpickr-calendar:after {
+    pointer-events: none; /* Remover pointer-events no válido 'initial' */
+}
+
+.flatpickr-months .flatpickr-month {
+    fill: currentColor; /* Usamos currentColor que es más compatible */
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+    fill: currentColor; /* Cambio de fill */
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+    fill: #f64747; /* Usamos color específico en lugar de fill */
+}
+
+.flatpickr-months .flatpickr-prev-month svg path,
+.flatpickr-months .flatpickr-next-month svg path {
+    fill: inherit; /* Usar herencia del color */
+}
+
+.numInputWrapper span svg path {
+    fill: rgba(0, 0, 0, 0.5); /* Definir color de relleno */
+}
+
+.flatpickr-current-month .numInputWrapper {
+    width: 8ch; /* Tamaño válido para el ancho */
+}
+
+.flatpickr-current-month input.cur-year[disabled],
+.flatpickr-current-month input.cur-year[disabled]:hover {
+    pointer-events: none; /* Corregir pointer-events */
+}
