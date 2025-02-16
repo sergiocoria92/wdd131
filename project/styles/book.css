@@ -398,9 +398,10 @@ nav {
     /* Estilos generales del banner */
     .banner.mobile {
         position: fixed;
-        top: 10px;
-        left: 5px; /* Más pegado al borde izquierdo */
-        width: 120px;
+        top: 50%; /* Coloca el banner en el centro vertical */
+        left: 0; /* Pegado al borde izquierdo */
+        transform: translateY(-50%); /* Centra el banner verticalmente */
+        width: 60px; /* Reducción del ancho para hacerlo más estrecho */
         background-color: orange;
         color: black;
         padding: 5px;
@@ -413,36 +414,23 @@ nav {
         transition: transform 0.2s ease-in-out;
     }
 
+    /* También podrías querer un banner en el lado derecho */
+    .banner.mobile.right {
+        left: auto; /* Para que se ponga en el lado derecho */
+        right: 0; /* Pegado al borde derecho */
+    }
 
-    
-    
-    
-    
-    /* Estilos para pantallas grandes */
-    .left {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 200px;
-    }
-    
-    .right {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-        width: 200px;
-    }
-        .mobile {
+    /* Opcionalmente, si lo quieres en la parte superior derecha */
+    .mobile {
         position: fixed;
-        top: 50%;
+        top: 50%; /* Coloca el banner en el centro vertical */
         left: 0; /* Si lo quieres en la derecha, cambia a right: 0; */
         transform: translateY(-50%);
-        width: 80px; /* Ajusta el ancho del banner */
+        width: 60px; /* Ajusta el ancho para hacerlo más estrecho */
         height: auto;
         writing-mode: vertical-rl; /* Hace que el texto esté en vertical */
-        text-orientation: mixed;}}
-
+        text-orientation: mixed;
+    }
+}
 
     
