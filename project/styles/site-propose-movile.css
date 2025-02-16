@@ -1,66 +1,60 @@
-/* Estilos generales para móviles */
-@media (max-width: 768px) {
-    /* Título principal */
-    h1 {
-        font-size: 1.5rem; /* Reducir el tamaño de la fuente */
-        padding: 0.5rem; /* Ajustar el padding */
-    }
+/* Asegúrate de que el contenedor principal tenga una posición relativa o absoluta */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Esto asegura que ocupe todo el alto de la ventana */
+    background-color: #f0f0f0; /* Puedes cambiar el fondo si lo necesitas */
+}
 
-    /* Barra de navegación */
-    nav {
-        flex-direction: column; /* Cambiar a disposición vertical */
-        padding: 0.5rem; /* Reducir el padding */
-    }
+/* Asegúrate de que .info-container ocupe el 100% de las dimensiones del contenedor padre */
+.info-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px; /* Ajusta el padding si es necesario */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
 
-    nav ul {
-        flex-direction: column; /* Cambiar a disposición vertical */
-    }
+/* Si quieres que los elementos dentro de .info-container se adapten de forma flexible */
+.why2, .why3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1; /* Asegura que ambos elementos ocupen el espacio disponible de manera equitativa */
+    text-align: center;
+}
 
-    nav a {
-        padding: 0.5rem; /* Reducir el padding */
-        font-size: 1rem; /* Reducir el tamaño de la fuente */
-    }
+.why2 img, .why3 img {
+    max-width: 100px; /* Ajusta el tamaño de las imágenes según sea necesario */
+    margin-right: 15px;
+}
 
-    /* Imagen de fondo */
-    .image-container {
-        height: 100vh; /* Mantener la altura completa */
-    }
+.overview-text {
+    font-size: 16px;
+    color: #333;
+    max-width: 80%; /* Ajusta el texto para que no se desborde */
+    margin: 0;
+}
 
-    .image-container img {
-        width: 100%; /* Asegurar que la imagen ocupe todo el ancho */
-        height: 100%; /* Asegurar que la imagen ocupe toda la altura */
-    }
+/* Ajustes para el footer y header si los tienes */
+header, footer {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Asegura que el header y footer queden por encima */
+}
 
-    /* Título sobre la imagen */
-    .why1 {
-        position: absolute;
-        font-size: 1.5rem; /* Reducir el tamaño de la fuente */
-        top: 10%; /* Ajustar la posición */
-    }
+footer {
+    bottom: 0;
+}
 
-    /* Contenedor de información */
-    .info-container {
-        flex-direction: column; /* Cambiar a disposición vertical */
-        bottom: 5%; /* Ajustar la posición */
-        width: 90%; /* Reducir el ancho */
-        gap: 10px; /* Reducir el espacio entre cuadros */
-    }
-
-    .why2, .why3 {
-        padding: 10px; /* Reducir el padding */
-    }
-
-    .overview-text {
-        font-size: 1rem; /* Reducir el tamaño de la fuente */
-    }
-
-    .why2 img, .why3 img {
-        width: 40px; /* Reducir el tamaño de los iconos */
-    }
-
-    /* Footer */
-    footer {
-        padding: 10px 0; /* Reducir el padding */
-        font-size: 0.8rem; /* Reducir el tamaño de la fuente */
-    }
+header {
+    top: 0;
 }
